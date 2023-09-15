@@ -2,15 +2,30 @@
 <htmL>
   <head>
     <title>Shipping calculator</title>
+    <style>
+      .cost{
+        font-size: 15px;
+        padding: 10px;
+      }
+      .calculate{
+        background: black;
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 20px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
      <p>Shipping calculator</p>
-     <input placeholder="cost of order" class="js-cost" onkeydown="
+     <input placeholder="cost of order" class="js-cost cost" onkeydown="
        keyPress(event);
        ">
      <button onclick="
       calculateTotal();
-     ">Calculate</button>
+     " class="calculate">Calculate</button>
      <p class="js-total"></p>
   </body>
   <script>
